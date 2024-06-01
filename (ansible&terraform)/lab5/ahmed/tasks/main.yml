@@ -1,0 +1,30 @@
+---
+- name: install
+  apt:
+    name: apache2
+    state: present
+
+      #- name: start
+      #systemd:
+      #name: apache2
+      #state: started
+      #enabled: yes
+
+- name: open port
+  ufw:
+    rule: allow
+    port: "80"
+    proto: tcp
+    
+
+- name: send photo
+  copy:
+    src: files/ahmed.jpeg
+    dest: "{{photo_root}}"
+
+
+- name: message of today
+  template:
+    src: motd.j2
+    dest: /etc/motd
+# tasks file for ahmed

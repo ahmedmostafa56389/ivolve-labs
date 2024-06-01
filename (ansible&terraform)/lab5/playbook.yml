@@ -1,0 +1,8 @@
+---
+- name: lab5
+  hosts: server
+  become: true
+  vars_files:
+    - secr.yml
+  roles: 
+    - ahmed

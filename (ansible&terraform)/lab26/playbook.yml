@@ -1,0 +1,24 @@
+---
+- name: lab26
+  hosts: all
+  become: true
+  tasks:
+    - name: Update package cache and install required packages
+      yum:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - docker
+        - python3-pip
+
+
+    - name: Start Docker service
+      service:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Install OpenShift CLI
+      pip:
+        name: openshift
+        state: present

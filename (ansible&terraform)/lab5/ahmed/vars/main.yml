@@ -1,0 +1,7 @@
+---
+apache: apache2
+web_config_file: /etc/httpd/conf/httpd.conf
+web_root: /var/www/html/index.html
+photo_root: /var/www/html/photo.jpeg
+web_fw_service: apache2
+# vars file for ahmed

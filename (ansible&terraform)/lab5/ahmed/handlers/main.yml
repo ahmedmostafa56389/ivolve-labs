@@ -1,0 +1,7 @@
+---
+- name: restart httpd
+  ansible.builtin.service:
+    name: "{{web_service }}"
+    state: restarted
+
+# handlers file for ahmed
