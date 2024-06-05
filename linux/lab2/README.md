@@ -1,29 +1,70 @@
-# ivolve-OJT
-## Lab2 aws
-### Test pin using bash script
+# ivolve internship
 
-This is a simple Bash script named `test_ping.sh` to ping all devices in a given subnet (`192.168.1.0/24`). 
-The script pings each IP address in the subnet and reports whether the host is up or down.
+## Lab3e Storage usage alart
 
-### Usage
+This script Send me an email as an alarm if my storage usage become over a threshold that i determined using 'msmtp' and 'mailutils' packages
 
-1. Clone the repository or download the `test_ping.sh` script to your local machine.
-2. Make the script executable:
-   ```sh
-   chmod +x test_ping.sh
-   ```
 
-3. Run the script 
-    ```sh
-   ./test_ping.sh
-   ```
+## Prerequisites
 
-### Example Output
+1. **msmtp**: Ensure `msmtp` is installed and configured correctly.
+2. **mailutils**: Install `mailutils` for `mailx` command if not already installed.
 
- ```sh
-   server 192.168.1.1 is up and running 
-   server 192.168.1.2 is up and running
-   server 192.168.1.3 is unreachable
-   server 192.168.1.4 is unreachable
-  ```
+### Installation
+
+1. **Install msmtp and mailutils**:
+```bash
+    sudo apt update
+    sudo apt install msmtp mailutils
+```
+
+2. **Configure msmtp**:
+    Create a `~/.msmtprc` file with the following content:
+```sh
+    # Set default values
+defaults
+auth           on
+tls            on
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+
+# Gmail configuration
+account       gmail
+host          smtp.gmail.com
+port          587
+from          ..............@gmail.com
+user          ..............@gmail.com
+password      password
+
+# Set the default account
+account default : gmail
+```
+
+3. **Set Permissions**:
+    Ensure the `~/.msmtprc` file has the correct permissions:
+
+```bash
+    chmod 600 ~/.msmtprc
+```
+4. **Make the Script Executable and Run it**:
+ ![Alt text](scrept.png)
+    ```bash
+   chmod +x test.sh
+   ./test.sh
+    ```
+
+
+ 
+
+ 5. **the output**:
+
+  ![Alt text](run.png)
+
+ 6. **mail**:
+
+  ![Alt text](mail.png)
+***
+
+***
+
+
  
