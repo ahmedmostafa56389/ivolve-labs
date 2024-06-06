@@ -1,5 +1,5 @@
 # ivolve-OJT
-## Lab2 aws
+## Lab3
 ### Test pin using bash script
 
 This is a simple Bash script named `test_ping.sh` to ping all devices in a given subnet (`192.168.1.0/24`). 
