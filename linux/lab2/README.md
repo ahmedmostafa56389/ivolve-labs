@@ -1,6 +1,6 @@
 # ivolve internship
 
-## Lab3e Storage usage alart
+## Lab2 Storage usage alart
 
 This script Send me an email as an alarm if my storage usage become over a threshold that i determined using 'msmtp' and 'mailutils' packages
 
