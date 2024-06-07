@@ -4,6 +4,8 @@ Here's a basic README file for the MySQL database creation task using Ansible:
 ## lab6
 ## Ansible MySQL Database Creation
 
+** note that iuse the linux academy worksatation**
+
 This Ansible playbook automates the process of creating a MySQL database and user on a remote server. It utilizes Ansible's capabilities to manage MySQL packages, services, databases, and users.
 
 ## Prerequisites
