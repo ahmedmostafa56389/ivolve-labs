@@ -113,7 +113,7 @@ Then run get all command to show the statefulset and its service
 ***
 4- Verify the PVC for each pod:
 ```sh
-kubectl get pvc 
+kubectl get pv 
 ```
 ![alt text](pv.png)
 

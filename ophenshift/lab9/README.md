@@ -5,7 +5,7 @@ You'll verify that the file is served by NGINX using curl localhost/hello.txt. N
 
 
 
-| Feature      | Persistent Volume (PV)                   | Persistent Volume Claim (PVC)                        |StorageClass  StorageClass                                  |
+| Feature      | Persistent Volume (PV)                   | Persistent Volume Claim (PVC)                        |StorageClass                                   |
 |----------------------|------------------------------------------------|------------------------------------------|------------------------------------------------|
 | **Definition**  | Cluster storage provisioned by admin or dynamically. | User request for storage.                 | Template for dynamic storage provisioning.    |
 | **Lifecycle** | Independent of any Pod.                        | Tied to the lifecycle of the Pod using it.| Independent; used for creating PVs.           |
