@@ -210,6 +210,3 @@ kubectl delete namespace nti
     kubectl logs <jenkins-pod-name> -n nti
     ```
 
----
-
-This README provides a comprehensive guide for setting up a Jenkins deployment in a Kubernetes cluster, utilizing init containers, and monitoring health with readiness and liveness probes.
